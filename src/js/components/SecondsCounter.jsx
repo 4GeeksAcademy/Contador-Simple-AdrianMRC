@@ -2,7 +2,7 @@ import { Box, Paper, Typography } from '@mui/material';
 import { FaRegClock } from 'react-icons/fa';
 
 const SecondsCounter = ({ seconds }) => {
-  // Formatea los segundos con 6 dígitos rellenados con ceros
+
   const paddedSeconds = seconds.toString().padStart(6, '0');
   
   return (
@@ -14,19 +14,18 @@ const SecondsCounter = ({ seconds }) => {
       mt: 4,
       padding: 2
     }}>
-      {/* Icono del reloj */}
+      
       <Paper sx={{
         p: 2,
         minWidth: 80,
         textAlign: 'center',
-        bgcolor: 'primary.main',
+        bgcolor: '#0032b0',
         color: 'white',
         borderRadius: 2
       }}>
         <FaRegClock style={{ fontSize: '4rem' }} />
       </Paper>
       
-      {/* Dígitos del contador */}
       {[...paddedSeconds].map((digit, index) => (
         <Paper 
           key={index}
@@ -34,7 +33,7 @@ const SecondsCounter = ({ seconds }) => {
             p: 2,
             minWidth: 80,
             textAlign: 'center',
-            bgcolor: 'secondary.main',
+            bgcolor: '#1aa1c5',
             color: 'white',
             borderRadius: 2,
             boxShadow: 3
